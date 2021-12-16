@@ -1,0 +1,410 @@
+{
+	"info": {
+		"_postman_id": "3ee648c7-d914-41c8-9310-6d4766dfb3a4",
+		"name": "CONTRACT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Save Private Customer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n            \"name\":\"Mario Rossi\",\r\n            \"email\":\"email@email.it\",\r\n            \"phone\":\"+39 35178521\",\r\n            \"adress\":\"Via dei mille\",\r\n            \"type\":{\"id\":\"2\"}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/customer/save",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"customer",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save Business Customer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n            \"name\":\"Jakala s.p.a\",\r\n            \"email\":\"jakala@email.com\",\r\n            \"phone\":\"06 251478\",\r\n            \"adress\":\"Via dei mille\",\r\n            \"type\":{\"id\":\"1\"}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/customer/save",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"customer",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save Gas Contract",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"type\":{\"id\":\"3\",\r\n                \"contractType\":\"GAS\"},\r\n    \"dateStart\":\"2021-12-16\",\r\n    \"customer\":{\"id\":\"1\",\r\n            \"name\":\"Mario Rossi\",\r\n            \"email\":\"email@email.it\",\r\n            \"phone\":\"+39 35178521\",\r\n            \"adress\":\"Via dei mille\",\r\n            \"type\":{\"id\":\"2\"}}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/contract/save",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"contract",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save Eletricity Contract",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"type\":{\"id\":\"2\",\r\n                \"contractType\":\"ELETRICITY\"},\r\n    \"dateStart\":\"2021-12-16\",\r\n    \"customer\":{\"id\":\"1\",\r\n            \"name\":\"Mario Rossi\",\r\n            \"email\":\"email@email.it\",\r\n            \"phone\":\"+39 35178521\",\r\n            \"adress\":\"Via dei mille\",\r\n            \"type\":{\"id\":\"2\"}}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/contract/save",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"contract",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sve Both Contract",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"type\":{\"id\":\"1\",\r\n                \"contractType\":\"BOTH\"},\r\n    \"dateStart\":\"2021-12-16\",\r\n    \"customer\":{\"id\":\"2\",\r\n            \"name\":\"Jakala s.p.a\",\r\n            \"email\":\"jakala@email.com\",\r\n            \"phone\":\"06 251478\",\r\n            \"adress\":\"Via dei mille\",\r\n            \"type\":{\"id\":\"1\"}\r\n}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/contract/save",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"contract",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find Contract by name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/contract/name?customerName=Mario Rossi",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"contract",
+						"name"
+					],
+					"query": [
+						{
+							"key": "customerName",
+							"value": "Mario Rossi"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find Contract by date",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/contract/date?date=2021-12-16",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"contract",
+						"date"
+					],
+					"query": [
+						{
+							"key": "date",
+							"value": "2021-12-16"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find Contrac by type",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"id\":\"3\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/contract/type",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"contract",
+						"type"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find Contract by",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"id\":2}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/contract/typecustomer",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"contract",
+						"typecustomer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find Contrac by Customer id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/contract/id?id=1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"contract",
+						"id"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find by Customer name And Date",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/contract/namedate?name=Jakala s.p.a&date=2021-12-16",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"contract",
+						"namedate"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Jakala s.p.a"
+						},
+						{
+							"key": "date",
+							"value": "2021-12-16"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find by Customer name And Contract type",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/contract/namecontrac?name=Jakala s.p.a&id=1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"contract",
+						"namecontrac"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Jakala s.p.a"
+						},
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find by Date and Contract type",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/contract/datecontract?date=2021-12-16&id=1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"contract",
+						"datecontract"
+					],
+					"query": [
+						{
+							"key": "date",
+							"value": "2021-12-16"
+						},
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find by Date And Customer type",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/contract/datecustomer?date=2021-12-16&id=2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"contract",
+						"datecustomer"
+					],
+					"query": [
+						{
+							"key": "date",
+							"value": "2021-12-16"
+						},
+						{
+							"key": "id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
